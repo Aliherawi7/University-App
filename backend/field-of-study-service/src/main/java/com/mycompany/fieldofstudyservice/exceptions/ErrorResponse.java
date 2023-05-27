@@ -1,2 +1,13 @@
-package com.mycompany.fieldofstudyservice.exceptions;public class ErrorResponse {
+package com.mycompany.fieldofstudyservice.exceptions;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import org.springframework.http.HttpStatus;
+
+@AllArgsConstructor
+@Data
+public class ErrorResponse {
+    private HttpStatus httpStatus;
+    private int statusCode;
+    private String message;
 }
