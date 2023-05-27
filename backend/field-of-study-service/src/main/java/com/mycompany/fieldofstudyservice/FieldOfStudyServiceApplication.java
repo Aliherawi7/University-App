@@ -47,8 +47,8 @@ public class FieldOfStudyServiceApplication {
                             .fieldOfStudyId(1L)
                             .description("test")
                             .build();
-            fieldOfStudyService.save(fieldOfStudy1);
-            fieldOfStudyService.save(fieldOfStudy2);
+            fieldOfStudyService.addFieldOfStudy(fieldOfStudy1);
+            fieldOfStudyService.addFieldOfStudy(fieldOfStudy2);
             departmentService.save(department1);
             departmentService.save(department2);
 

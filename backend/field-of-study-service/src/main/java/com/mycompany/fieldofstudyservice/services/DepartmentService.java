@@ -20,12 +20,12 @@ public class DepartmentService {
     }
 
     public Department getDepartmentByDepartmentIdAndFieldStudyId(long depId, long fieldStudyId) {
-        log.info("department not found with provided field id: {} and department id: {}", depId, depId);
+        log.info("department not found with provided field id: {} and department id: {}", fieldStudyId, depId);
         return departmentRepository.findDepartmentByIdAndFieldOfStudyId(depId, fieldStudyId)
-                .orElseThrow(() -> new ResourceNotFoundException("department not found with provided id: " + depId));
+                .orElseThrow(() -> new ResourceNotFoundException("department not found with provided fieldStudyId: " + fieldStudyId + " and departmentId: " + depId));
     }
 
-    public List<Department> getAllDepartmentByFieldStudyId(Long fieldStudyId){
+    public List<Department> getAllDepartmentByFieldStudyId(Long fieldStudyId) {
         return departmentRepository.findAllByFieldOfStudyId(fieldStudyId);
     }
 }
