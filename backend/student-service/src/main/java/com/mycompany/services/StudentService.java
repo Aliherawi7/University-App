@@ -1,7 +1,7 @@
 package com.mycompany.services;
 
 import com.mycompany.dto.StudentDTO;
-import com.mycompany.dto.StudentReqisterationRequest.StudentRegistrationRequest;
+import com.mycompany.dto.StudentRegistrationRequest;
 import com.mycompany.exceptions.ResourceNotFoundException;
 import com.mycompany.models.Department;
 import com.mycompany.models.FieldOfStudy;
@@ -33,9 +33,9 @@ public class StudentService {
         fieldOfStudy = restTemplate.getForObject("http://localhost:8083/api/v1/field-of-studies/{id}",
                 FieldOfStudy.class,
                 student.get().getFieldOfStudyId());
-        department = restTemplate.getForObject("http://localhost:8083/api/v1/field-of-studies/{id}/department/{id}",
+        department = restTemplate.getForObject("http://localhost:8083/api/v1/field-of-studies/{fieldStudyId}/departments/{departmentId}",
                 Department.class,
-                student.get().getId(),
+                student.get().getFieldOfStudyId(),
                 student.get().getDepartmentId()
         );
 
@@ -44,8 +44,14 @@ public class StudentService {
                 .name(student.get().getName())
                 .lastName(student.get().getLastName())
                 .gender(student.get().getGender())
+                .email(student.get().getEmail())
+                .joinedDate(student.get().getJoinedDate())
+                .nationality(student.get().getNationality())
+                .imageUrl("image url")
                 .location(student.get().getLocation())
                 .dob(student.get().getDob())
+                .phoneNumber(student.get().getPhoneNumber())
+                .nationalId(student.get().getNationalId())
                 .fieldOfStudy(fieldOfStudy != null ? fieldOfStudy.getFieldName() : null)
                 .departmentName(department != null ? department.getDepartmentName() : null)
                 .build();

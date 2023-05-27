@@ -1,4 +1,4 @@
-package com.mycompany.dto.StudentReqisterationRequest;
+package com.mycompany.dto;
 
 public class StudentRegistrationRequest {
 }

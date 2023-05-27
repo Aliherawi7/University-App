@@ -26,7 +26,7 @@ public class StudentApplication {
                     .name("ahmad")
                     .id(1L)
                     .departmentId(1L)
-                    .fieldOfStudyId(1L)
+                    .fieldOfStudyId(2L)
                     .dob(LocalDate.now())
                     .gender(Gender.MALE)
                     .joinedDate(LocalDate.now())
@@ -34,6 +34,9 @@ public class StudentApplication {
                     .phoneNumber("4235234234")
                     .lastName("ahmadi")
                     .location("AFG")
+                    .nationalId("32634523")
+                    .nationality("Afghan")
+                    .password("12345")
                     .build();
             studentRepository.save(student);
         };
