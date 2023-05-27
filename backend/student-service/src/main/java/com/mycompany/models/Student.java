@@ -1,21 +1,21 @@
 package com.mycompany.models;
 
 import com.mycompany.constants.Gender;
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.*;
 import java.time.LocalDate;
 
-@Entity
-@AllArgsConstructor()
-@Getter
-@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 @Builder
+@Entity
 public class Student {
+
     @Id
-    @SequenceGenerator(name = "student-sequence", initialValue = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student-sequence")
+    @SequenceGenerator(name = "student_sequence", initialValue = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "student_sequence")
     private Long id;
     private String name;
     private String lastName;
@@ -31,6 +31,5 @@ public class Student {
     private Long departmentId;
     private String email;
     private String password;
-
 }
 
