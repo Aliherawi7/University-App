@@ -25,7 +25,6 @@ public class Student {
     private Gender gender;
     private LocalDate joinedDate;
     private String nationalId;
-    private String imageUrl;
     private String location;
     private Long fieldOfStudyId;
     private Long departmentId;
