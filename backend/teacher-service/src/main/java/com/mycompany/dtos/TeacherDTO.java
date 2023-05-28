@@ -1,2 +1,11 @@
-package com.mycompany.dtos;public class TeacherDTO {
+package com.mycompany.dtos;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+
+@AllArgsConstructor
+@Data
+@Builder
+public class TeacherDTO {
 }
