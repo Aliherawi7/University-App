@@ -47,7 +47,6 @@ public class StudentService {
                 .email(student.get().getEmail())
                 .joinedDate(student.get().getJoinedDate())
                 .nationality(student.get().getNationality())
-                .imageUrl("image url")
                 .location(student.get().getLocation())
                 .dob(student.get().getDob())
                 .phoneNumber(student.get().getPhoneNumber())
