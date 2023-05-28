@@ -1,2 +1,7 @@
-package com.mycompany.exceptions;public class ResouceNotFoundException {
+package com.mycompany.exceptions;
+
+public class ResourceNotFoundException extends RuntimeException{
+    public ResourceNotFoundException(String message) {
+        super(message);
+    }
 }
